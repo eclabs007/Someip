@@ -11,9 +11,37 @@
       "applications" : 
          [
          {
-            "name" : "Cluster",
-            "id" : "0x1213"
+            "name" : "ECU",
+            "id" : "0x1212"
          }
+   ],
+      "services" :
+         [
+         {
+            "service" : "0x1234",
+            "instance" : "0x5678",
+            "unreliable" : "30509",
+           "events" : 
+            [
+                {
+                    "event" : "0x8778",
+		    "is_field" : "false"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0x4465",
+                    "events" : [ "0x8778" ],
+                    "multicast" : 
+                    { 
+                        "address" : "224.225.226.233", 
+                        "port" : "32344"
+                    }
+                }
+            ]
+         }
+
    ],
       "routing" : "ECU",
       "service-discovery" :
